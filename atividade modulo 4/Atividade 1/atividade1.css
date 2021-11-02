@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    max-width: 80%;
+
+}
+
+div {
+    margin: 20px;
+}
+
+
+
+.screen{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.number input {
+    margin: 0 5px;
+}
+
+.screen span {
+    align-self: flex-end;
+    padding: 10px;
+}
+
+.result {
+    
+    display: flex;
+    align-items: center;
+    
+}
+
+button{
+    margin: 0 5px;
+}
+
+.result span{
+    border: 2px solid black;
+    padding: 20px;
+    margin: 0 5px;
+
+}
+
