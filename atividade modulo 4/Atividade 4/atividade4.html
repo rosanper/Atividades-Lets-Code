@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Drag Race</title>
+
+    <link rel="stylesheet" href="atividade4.css">
 </head>
 <body>
-    <h1>Drag Race</h1>
-    <form>
-        <Label>Nome do Competidor:<input type="text" required></Label>
-    </form>     
-    <div>
-            <button id = "start" onclick="start()">Start</button>
-            <button id = "stop"  disabled="true" onclick="stop()">Stop</button>
-    </div>
-    
-    <div class="mostrador"></div>
+    <main>
+
+        <h1>Drag Race</h1>
+        <div class="formulario">
+            <form>
+                <Label>Nome do Competidor:<input type="text" required></Label>
+            </form> 
+            <div class="butoes">
+                    <button id = "start" onclick="start()">Start</button>
+                    <button id = "stop"  disabled="true" onclick="stop()">Stop</button>
+            </div>
+        </div> 
+        <div class="mostrador">
+            <h2 id="competidor"></h2>
+            <span id="minutos">00</span>:<span id="segundos">00</span>:<span id="centesimoDeSegundos">00</span>
+        </div>
+
+    </main>
 
     <script src="atividade4.js"></script>
 </body>

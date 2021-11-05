@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dosis:wght@200&family=Press+Start+2P&family=Wallpoet&display=swap');
+
+/* font-family: 'Black Ops One', cursive;
+font-family: 'Dosis', sans-serif;                  ==> Fontes baixadas para ver qual seria escolhida
+font-family: 'Press Start 2P', cursive;                    para ser utilizada
+font-family: 'Wallpoet', cursive; */
+
+
+body{
+
+    background-image: linear-gradient(to right, rgb(111, 79, 138),rgb(31, 13, 112));
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Black Ops One', cursive;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.774);
+}
+
+.formulario{
+    margin: 30px;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: rgba(236, 213, 213, 0.61);
+}
+
+form{
+    margin: 20px;
+}
+
+input{
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+.butoes{
+    margin: 30px;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+button{
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: 'Black Ops One', cursive;
+}
+
+.mostrador{
+    margin: 30px;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 15px;
+    font-size: 50px;
+    min-width: 300px;
+    background-color: rgba(236, 213, 213, 0.61);
+}
+
+h2{
+    font-size: 30px;
+    margin-top: 0;
+    text-transform: capitalize;
+}
