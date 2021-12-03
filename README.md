@@ -24,5 +24,7 @@ __Módulo 4:__
 - Atividade 3 - Promise;
 - Atividade 4 - Drag race. 
 
+__Módulo 6 (Java) :__
 
+- Atividade 1 - Conversor;
 
