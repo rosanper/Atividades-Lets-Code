@@ -1,49 +1,45 @@
 package com.letscode.conversor;
 
-import java.io.IOException;
+import com.letscode.conversor.Service.Calculadora;
+import com.letscode.conversor.utils.Print;
+import com.letscode.conversor.utils.Scan;
+
 import java.util.Scanner;
 
 
 public class Conversor {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        Scanner ler = new Scanner(System.in);
+        Scanner leituraDados = new Scanner(System.in);
 
         char resposta;
+        double temperaturaCelsius;
+        double temperaturaKevin;
+        double temperaturaFahrenheit;
+        double temperaturaRankini;
+        double temperaturaReaumur;
 
         do {
 
-            System.out.println("Digite a temperatura que deseja converter em Celsius(°C):");
+            Print.mensagemEntradaTemperatura();
+            temperaturaCelsius = Scan.temperaturaEmCelsius();
 
+            temperaturaKevin = Calculadora.converterKelvin(temperaturaCelsius);
+            temperaturaFahrenheit = Calculadora.converterFahrenheit(temperaturaCelsius) ;
+            temperaturaRankini = Calculadora.converterRankini(temperaturaCelsius);
+            temperaturaReaumur = Calculadora.converterReaumur(temperaturaCelsius);
 
-            double temperaturaCelsius = ler.nextDouble();
+            Print.mensagensResultadosConversao
+                    (temperaturaFahrenheit,temperaturaKevin,temperaturaRankini,temperaturaReaumur);
 
-            final float CONSTANTE_KELVIN = 273.15f;
-            final float CONSTANTE_REAUMUR = 0.8f;
-            ;
-            final float CONSTANTE_RANKINE_MULTIPLICACAO = 1.8f;
-            final float CONSTANTE_RANKINE_ADICAO = 491.67f;
-            final float CONSTANTE_FAHRENHEIT_MULTIPLICACAO = 1.8f;
-            final float CONSTANTE_FAHRENHEIT_ADICAO = 32f;
-
-            double temperaturaKevin = temperaturaCelsius + CONSTANTE_KELVIN;
-            double temperaturaFahrenheit = (temperaturaCelsius * CONSTANTE_FAHRENHEIT_MULTIPLICACAO)
-                    + CONSTANTE_FAHRENHEIT_ADICAO;
-            double temperaturaRankini = (temperaturaCelsius * CONSTANTE_RANKINE_MULTIPLICACAO)
-                    + CONSTANTE_RANKINE_ADICAO;
-            double temperaturaReaumur = temperaturaCelsius * CONSTANTE_REAUMUR;
-
-            System.out.printf("A temperatura em Fahrenheit é de %.2f \n", temperaturaFahrenheit);
-            System.out.printf("A temperatura em Kelvin é de %.2f \n", temperaturaKevin);
-            System.out.printf("A temperatura em Rankine é de %.2f \n", temperaturaRankini);
-            System.out.printf("A temperatura em Reaumur é de %.2f \n", temperaturaReaumur);
-
-            ler.nextLine();
-            System.out.println("Deseja converter mais alguma temperatrua?(S/N)");
-
-            resposta = (char) System.in.read();
-            ler.nextLine();
+            Print.mensagemConverterNovamente();
+            resposta = Scan.respostaConverterNovamente();
+            System.out.printf("\n");
 
         }while(resposta == 's' || resposta == 'S');
+
+        if(resposta != 's' || resposta != 'S'){
+            Print.mensagemEncerramentoPrograma();
+        }
     }
 }
